@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: ocpnode-oq6l
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/user-workload:utherp0-tenant-ocpnode-oq6l
+      - image: quay.io/redhat-appstudio/user-workload@sha256:1383986b962c922b933dc99e42920ca78b7de65f7164c10f1eaa2bb13fcbcc59
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
