@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: ocpnode-oq6l
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: ocpnode-oq6l
+    app.kubernetes.io/part-of: uthtest1
+  name: ocpnode-oq6l
+  namespace: utherp0-tenant
+spec:
+  port:
+    targetPort: 3001
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: ocpnode-oq6l
+    weight: 100
+status: {}
